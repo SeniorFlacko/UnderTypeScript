@@ -47,7 +47,7 @@ const greet = () =>  {
 greet()
 
 /* Funcion arrow con un parametro */
-const greetFriend = friend => console.log("hello!!!!"+ friend)
+const greetFriend = (friend:string) => console.log("hello!!!!"+ friend)
 
 greetFriend("Pancho")
 
@@ -55,3 +55,46 @@ greetFriend("Pancho")
 const greetFriends = (friend1:string,friend2:string) => console.log("hello!!!!"+ friend1 +" "+ friend2)
 
 greetFriends("Pancho","Cris")
+
+//Default Parameters
+
+console.log("DEFAULT PARAMETERS")
+
+const countdown = (start:number=10):void => {
+    console.log("Init",start)
+    while(start>0){
+        start--;
+    }
+    console.log("Done",start)
+}
+
+//Inicia countdown con un valor por defecto de 10
+countdown() 
+
+//Inicia countdown con un valor de 30
+countdown(30) 
+
+//REST & Spread
+console.log("REST AND SPREAD")
+const numbers = [1,10,99,-5]
+
+console.log(Math.max(33,99,10,-3))
+console.log(Math.max(...numbers))
+
+function makeArray(...args:number[]) {
+    return args
+}
+console.log(makeArray(1,2,7,8,8,8))
+
+console.log("DESTRUCTORS")
+
+console.log("Destructuring Array")
+const myHobbies = ["Cooking","Sports"]
+const [ho1,ho2] = myHobbies
+console.log(ho1,ho2)
+
+console.log("Destructuring Object")
+const userDatos = {userName:"Cris",age:21}
+const {userName,age} = userDatos
+console.log(userName,age)
+
