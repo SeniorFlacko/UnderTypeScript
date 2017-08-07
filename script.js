@@ -38,3 +38,18 @@ var car = "BMW";
 console.log(car);
 car = { car: "BMW", series: 3 };
 console.log(car);
+//function returns string
+function returMyName() {
+    return "My truely name is: " + myTrueName;
+}
+console.log(returMyName());
+//void
+function sayHello() {
+    console.log("Hello");
+}
+sayHello();
+//argument types
+function multiply(value1, value2) {
+    return value1 * value2;
+}
+console.log(multiply(3, 3));

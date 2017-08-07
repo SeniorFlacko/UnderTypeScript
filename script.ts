@@ -54,3 +54,24 @@ console.log(car)
 car = {car:"BMW",series:3}
 console.log(car)
 
+
+//function returns string
+function returMyName():string{
+    return "My truely name is: " + myTrueName
+}
+console.log(returMyName())
+
+//void
+function sayHello():void{
+    console.log("Hello")
+}
+
+sayHello()
+
+//argument types
+
+function multiply(value1:number,value2:number):number{
+    return value1 * value2
+}
+console.log(multiply(3,3))
+
