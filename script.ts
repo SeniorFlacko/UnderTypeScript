@@ -75,3 +75,68 @@ function multiply(value1:number,value2:number):number{
 }
 console.log(multiply(3,3))
 
+// Funcion como un tipo
+let myMultiply;
+myMultiply = sayHello
+myMultiply()
+myMultiply = multiply
+console.log(myMultiply(5,2))
+
+// Funcion como un tipo mas especifico
+
+/*  
+    Esto no es una funcion sino una declaracion 
+    De una variable la cual especificamos que tipo de 
+    Funciones(Signatura y Return) puede aceptar
+    para ser igualada
+
+    Declara que tipo de funciones son aceptadas
+    Por la variable
+ */
+
+let myMultiply2:(val1:number,val2:number) => number;
+myMultiply2 = multiply
+console.log(myMultiply2(100,2))
+
+
+// Objects
+
+/* 
+    Typescript Infiere el esquema de un objeto 
+    De tal manera que nos sugiere los distintos campos
+    a traves del operador punto
+
+    userDate.name o userDate.age
+
+    Esto nos obliga a cumplir con es esquema del 
+    objeto ademas debemos respetar el nombre de las
+    PROPIEDADES
+
+    El orden importa ademas del nombre.
+
+*/
+let userDate = {
+    name:"Max",
+    age:27
+}
+
+userDate ={
+   name:"Cristian",
+   age:21
+}
+
+/* 
+    Si se quiere declarar una variable explicita como
+    un objeto
+
+    Se puede hacer lo siguente aunque no es lo mas eficiente
+    :/
+ */
+
+let userData: {name:string,age:number} = {
+    name: "Cris",
+    age:21 
+} 
+
+
+
