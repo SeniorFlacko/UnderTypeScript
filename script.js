@@ -106,3 +106,27 @@ var userData = {
     name: "Cris",
     age: 21
 };
+var complex = {
+    data: [100, 3.9, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+var complejo = {
+    data: [100, 3.9, 10],
+    output: function (all) {
+        return this.data;
+    }
+};
+// Union Type es cuando una variable puede tener uno o mas tipos 
+// Sin necesariamente ser TODOS los tipos
+var myFavoriteNumber = 21;
+myFavoriteNumber = 101;
+// Podemos revisar que tipo de type es en tiempo de ejecucion
+// mediante typeof pero el tipo debe ir entre comillas
+if (typeof myFavoriteNumber == "string") {
+    console.log("Es un string");
+}
+if (typeof myFavoriteNumber == "number") {
+    console.log("Es un numero");
+}

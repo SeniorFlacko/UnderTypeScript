@@ -138,5 +138,40 @@ let userData: {name:string,age:number} = {
     age:21 
 } 
 
+let complex: { data : number[], output: (all:boolean) => number[] } = {
+    data: [100,3.9,10],
+    output: function(all:boolean):number[]{
+        return this.data
+    }
+}
+
+/* 
+    Podemos ocupar un type personalizado para 
+    Hacer mas reusable el codigo
+ */
+
+type Complex = { data : number[], output: (all:boolean) => number[] }
+
+let complejo:Complex = {
+    data: [100,3.9,10],
+    output: function(all:boolean):number[]{
+        return this.data
+    }
+}
+
+// Union Type es cuando una variable puede tener uno o mas tipos 
+// Sin necesariamente ser TODOS los tipos
+
+let myFavoriteNumber:number | string = 21
+myFavoriteNumber = 101
 
 
+// Podemos revisar que tipo de type es en tiempo de ejecucion
+// mediante typeof pero el tipo debe ir entre comillas
+
+if(typeof myFavoriteNumber == "string"){
+    console.log("Es un string")
+}
+if(typeof myFavoriteNumber == "number"){
+    console.log("Es un numero")
+}
