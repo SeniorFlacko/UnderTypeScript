@@ -11,6 +11,12 @@ var hasBoobies = true;
 var myRealAge;
 myRealAge = 21;
 myRealAge = "21";
-//
+//type number
 var myTrueAge;
 myTrueAge = 21;
+//type string
+var myTrueName;
+myTrueName = "Flacko!";
+//array of string
+var hobbies = ["Cooking", "Sports"];
+console.log(typeof hobbies[0]);
