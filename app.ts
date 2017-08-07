@@ -98,3 +98,15 @@ const userDatos = {userName:"Cris",age:21}
 const {userName,age} = userDatos
 console.log(userName,age)
 
+
+//TEMPLATE LITERALS
+console.log("TEMPLATE LITERALS")
+const userNombre = "Cristian"
+
+const saludo = 
+`
+    Hola, ${userNombre} !
+    Soy un template literal
+
+`
+console.log(saludo)

@@ -75,3 +75,8 @@ console.log("Destructuring Object");
 var userDatos = { userName: "Cris", age: 21 };
 var userName = userDatos.userName, age = userDatos.age;
 console.log(userName, age);
+//TEMPLATE LITERALS
+console.log("TEMPLATE LITERALS");
+var userNombre = "Cristian";
+var saludo = "\n    Hola, " + userNombre + " !\n    Soy un template literal\n\n";
+console.log(saludo);
